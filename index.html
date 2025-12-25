@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление данными и слайдер</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Интерактивная таблица и слайдер</h1>
+        
+        <!-- Секция таблицы -->
+        <section class="section">
+            <h2>Управление данными в таблице</h2>
+            
+            <!-- Форма для ввода данных -->
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="name">Имя *</label>
+                    <input type="text" id="name" placeholder="Введите имя">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="text" id="email" placeholder="example@domain.com">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input type="text" id="phone" placeholder="+7 (999) 123-45-67">
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                
+                <button class="btn" id="add-btn">Добавить запись</button>
+            </div>
+            
+            <!-- Таблица -->
+            <div class="table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Имя</th>
+                            <th>Email</th>
+                            <th>Телефон</th>
+                            <th class="actions-cell">Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Данные будут загружены из localStorage или добавлены динамически -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="status-info" id="table-status">
+                Данные сохраняются автоматически в localStorage
+            </div>
+        </section>
+        
+        <!-- Секция слайдера -->
+        <section class="section">
+            <h2>Кастомный слайдер</h2>
+            
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <!-- Слайды будут добавлены через JavaScript -->
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <button class="slider-btn" id="prev-btn">‹</button>
+                <button class="slider-btn" id="next-btn">›</button>
+            </div>
+            
+            <div class="dots-container" id="dots-container">
+                <!-- Точки навигации будут добавлены через JavaScript -->
+            </div>
+            
+            <div class="auto-toggle">
+                <span>Автопрокрутка (5 сек):</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="auto-toggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            
+            <div class="status-info" id="slider-status">
+                Текущий слайд: <span id="current-slide">1</span> из <span id="total-slides">4</span>
+            </div>
+        </section>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
